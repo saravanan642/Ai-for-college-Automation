@@ -4,79 +4,43 @@ function getReply(message){
 
 message = message.toLowerCase();
 
-// COURSES
+if(message.includes("department"))
+return data.department;
 
-if(
-message.includes("course") ||
-message.includes("courses") ||
-message.includes("course enna") ||
-message.includes("course iruka") ||
-message.includes("courses enna")
-){
-return data.courses;
-}
+if(message.includes("transport") || message.includes("bus"))
+return data.transport;
 
-// FEES
-
-if(
-message.includes("fees") ||
-message.includes("fee") ||
-message.includes("fees evlo") ||
-message.includes("kattanam") ||
-message.includes("fees amount")
-){
+if(message.includes("fees"))
 return data.fees;
-}
 
-// HOSTEL
+if(message.includes("food") || message.includes("canteen"))
+return data.food;
 
-if(
-message.includes("hostel") ||
-message.includes("hostel iruka") ||
-message.includes("stay facility")
-){
+if(message.includes("hostel"))
 return data.hostel;
-}
 
-// LOCATION
-
-if(
-message.includes("location") ||
-message.includes("enga iruku") ||
-message.includes("college location")
-){
-return data.location;
-}
-
-// ADMISSION
-
-if(
-message.includes("admission") ||
-message.includes("apply") ||
-message.includes("seat")
-){
-return data.admission;
-}
-
-// PLACEMENT
-
-if(
-message.includes("placement") ||
-message.includes("job")
-){
+if(message.includes("placement"))
 return data.placement;
-}
 
-// CONTACT
+if(message.includes("events"))
+return data.events;
 
-if(
-message.includes("contact") ||
-message.includes("phone")
-){
-return data.contact;
-}
+if(message.includes("sports"))
+return data.sports;
 
-return "Please ask about courses, fees, hostel, admission or placement.";
+if(message.includes("campus"))
+return data.campus;
+
+if(message.includes("library"))
+return data.library;
+
+if(message.includes("counselling"))
+return data.counselling;
+
+if(message.includes("history"))
+return data.history;
+
+return "Please ask about department, transport, fees, hostel or placement.";
 
 }
 

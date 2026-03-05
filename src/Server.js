@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
-const getReply = require("./src/Server/chatbotLogic");
+const getReply = require("./Server/chatbotLogic");
 
 const app = express();
 
@@ -19,5 +19,5 @@ res.json({reply});
 });
 
 app.listen(5000,()=>{
-console.log("AI College Chatbot running on port 5000");
+console.log("Chatbot server running on port 5000");
 });
