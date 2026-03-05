@@ -26,7 +26,7 @@ function Navbar() {
 
           <li>
             <a
-              href="#home"
+              href="/"
               className="hover:text-yellow-300 transition duration-300"
             >
               Home
@@ -35,7 +35,7 @@ function Navbar() {
 
           <li>
             <a
-              href="#about"
+              href="/about"
               className="hover:text-yellow-300 transition duration-300"
             >
               About
@@ -44,7 +44,7 @@ function Navbar() {
 
           <li>
             <a
-              href="#courses"
+              href="/courses"
               className="hover:text-yellow-300 transition duration-300"
             >
               Courses
@@ -53,7 +53,7 @@ function Navbar() {
 
           <li>
             <a
-              href="#facilities"
+              href="/facilities"
               className="hover:text-yellow-300 transition duration-300"
             >
               Facilities
@@ -62,7 +62,7 @@ function Navbar() {
 
           <li>
             <a
-              href="#contact"
+              href="/contact"
               className="hover:text-yellow-300 transition duration-300"
             >
               Contact
@@ -73,9 +73,12 @@ function Navbar() {
 
         {/* Admission Button */}
 
-        <button className="bg-yellow-400 text-blue-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">
-          Apply Now
-        </button>
+       <a 
+  href="/admistion" 
+  className="bg-yellow-400 text-blue-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition inline-block"
+>
+  Apply Now
+</a>
 
       </div>
 
