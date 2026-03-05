@@ -1,34 +1,23 @@
-import collegeData from "./collegeData";
+const collegeData = require("./collegeData");
 
-function chatbotLogic(message) {
+function getReply(message){
 
-  const msg = message.toLowerCase();
+message = message.toLowerCase();
 
-  if (msg.includes("course")) {
-    return collegeData.courses;
-  }
+if(message.includes("course"))
+return collegeData.courses;
 
-  if (msg.includes("fees")) {
-    return collegeData.fees;
-  }
+if(message.includes("fees"))
+return collegeData.fees;
 
-  if (msg.includes("hostel")) {
-    return collegeData.hostel;
-  }
+if(message.includes("hostel"))
+return collegeData.hostel;
 
-  if (msg.includes("location")) {
-    return collegeData.location;
-  }
+if(message.includes("location"))
+return collegeData.location;
 
-  if (msg.includes("admission")) {
-    return collegeData.admission;
-  }
+return "Please ask about courses, fees, hostel, location or admission";
 
-  if (msg.includes("contact")) {
-    return collegeData.contact;
-  }
-
-  return "Sorry, I didn't understand. Please ask about courses, fees, hostel, admission or location.";
 }
 
-export default chatbotLogic;
+module.exports = getReply;
