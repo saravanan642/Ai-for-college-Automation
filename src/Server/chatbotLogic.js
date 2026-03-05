@@ -1,22 +1,82 @@
-const collegeData = require("./collegeData");
+const data = require("./collegeData");
 
 function getReply(message){
 
 message = message.toLowerCase();
 
-if(message.includes("course"))
-return collegeData.courses;
+// COURSES
 
-if(message.includes("fees"))
-return collegeData.fees;
+if(
+message.includes("course") ||
+message.includes("courses") ||
+message.includes("course enna") ||
+message.includes("course iruka") ||
+message.includes("courses enna")
+){
+return data.courses;
+}
 
-if(message.includes("hostel"))
-return collegeData.hostel;
+// FEES
 
-if(message.includes("location"))
-return collegeData.location;
+if(
+message.includes("fees") ||
+message.includes("fee") ||
+message.includes("fees evlo") ||
+message.includes("kattanam") ||
+message.includes("fees amount")
+){
+return data.fees;
+}
 
-return "Please ask about courses, fees, hostel, location or admission";
+// HOSTEL
+
+if(
+message.includes("hostel") ||
+message.includes("hostel iruka") ||
+message.includes("stay facility")
+){
+return data.hostel;
+}
+
+// LOCATION
+
+if(
+message.includes("location") ||
+message.includes("enga iruku") ||
+message.includes("college location")
+){
+return data.location;
+}
+
+// ADMISSION
+
+if(
+message.includes("admission") ||
+message.includes("apply") ||
+message.includes("seat")
+){
+return data.admission;
+}
+
+// PLACEMENT
+
+if(
+message.includes("placement") ||
+message.includes("job")
+){
+return data.placement;
+}
+
+// CONTACT
+
+if(
+message.includes("contact") ||
+message.includes("phone")
+){
+return data.contact;
+}
+
+return "Please ask about courses, fees, hostel, admission or placement.";
 
 }
 

@@ -1,16 +1,25 @@
 const collegeData = {
 
-courses: "We offer BE, BTech, MBA and MCA programs.",
+courses:
+"Our college offers BE, BTech, MBA and MCA programs.",
 
-fees: "The average annual fees is ₹50,000.",
+fees:
+"The average annual fees is ₹50,000.",
 
-hostel: "Hostel facilities are available for boys and girls.",
+hostel:
+"Yes, hostel facility available for boys and girls.",
 
-location: "Our college is located in Erode, Tamil Nadu.",
+location:
+"Our college is located in Erode, Tamil Nadu.",
 
-admission: "Admission is done through TNEA counseling.",
+admission:
+"Admission is through TNEA counselling.",
 
-contact: "Contact us at +91 9876543210."
+placement:
+"Our college provides good placement opportunities.",
+
+contact:
+"Contact us at +91 9876543210"
 
 }
 

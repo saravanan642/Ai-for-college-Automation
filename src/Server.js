@@ -1,41 +1,23 @@
 const express = require("express");
 const cors = require("cors");
 
+const getReply = require("./src/Server/chatbotLogic");
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-const collegeData = require("./src/Server/collegeData");
+app.post("/chat",(req,res)=>{
 
-app.post("/chat", (req, res) => {
+const message = req.body.message;
 
-  const message = req.body.message.toLowerCase();
+const reply = getReply(message);
 
-  let reply = "Sorry, I don't understand your question.";
-
-  if (message.includes("course"))
-    reply = collegeData.courses;
-
-  else if (message.includes("fees"))
-    reply = collegeData.fees;
-
-  else if (message.includes("hostel"))
-    reply = collegeData.hostel;
-
-  else if (message.includes("location"))
-    reply = collegeData.location;
-
-  else if (message.includes("admission"))
-    reply = collegeData.admission;
-
-  else if (message.includes("contact"))
-    reply = collegeData.contact;
-
-  res.json({ reply });
+res.json({reply});
 
 });
 
-app.listen(5000, () => {
-  console.log("Backend running on port 5000");
+app.listen(5000,()=>{
+console.log("AI College Chatbot running on port 5000");
 });

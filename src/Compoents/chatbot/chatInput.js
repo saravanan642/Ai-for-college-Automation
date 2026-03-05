@@ -28,7 +28,7 @@ return(
 <div className="flex border-t p-2">
 
 <input
-className="flex-1 border rounded px-3 py-2"
+className="flex-1 border px-3 py-2 rounded"
 value={input}
 onChange={(e)=>setInput(e.target.value)}
 placeholder="Ask about courses, fees..."
