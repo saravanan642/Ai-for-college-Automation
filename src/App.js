@@ -1,35 +1,43 @@
-import Navbar from "./Compoents/Navbar";
-import Footer from "./Compoents/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./Compoents/Footer";
+import Footer from "./Compoents/Navbar";
+
+import Home from "./Compoents/Pages/Home";
+import About from "./Compoents/Pages/About";
+import Courses from "./Compoents/Pages/Courses";
+import Facilities from "./Compoents/Pages/Facilities";
+import Contact from "./Compoents/Pages/Courses"
+
 import Chatbot from "./Compoents/chatbot/Chatbot";
 
-function App(){
+function App() {
 
-return(
+  return (
+    <Router>
 
-<div>
+      <Navbar />
 
-<Navbar/>
+      <Routes>
 
-<div className="p-10 text-center">
+        <Route path="/" element={<Home />} />
 
-<h1 className="text-3xl font-bold">
-Welcome to Our College Website
-</h1>
+        <Route path="/about" element={<About />} />
 
-<p className="mt-3">
-Ask anything about courses, fees, hostel or admission.
-</p>
+        <Route path="/courses" element={<Courses />} />
 
-</div>
+        <Route path="/facilities" element={<Facilities />} />
 
-<Chatbot/>
+        <Route path="/contact" element={<Contact />} />
 
-<Footer/>
+      </Routes>
 
-</div>
+      <Chatbot />
 
-)
+      {/* <Footer /> */}
 
+    </Router>
+  );
 }
 
 export default App;
